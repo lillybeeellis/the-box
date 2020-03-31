@@ -21,7 +21,15 @@
 {#if box.locked}
 <p>The box is locked.</p>
 <button on:click={unlock}>Unlock</button>
+
 {:else}
 <p>The box is unlocked </p>
-<button on:click={lock}>Lock</button>
+<button on:click={lock}>L ock</button>
+<ul>
+{#each box.contents as item}
+  <li>{item}</li>
+{/each}
+</ul>
+
+
 {/if}
